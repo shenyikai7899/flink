@@ -367,7 +367,7 @@ by Flink's checkpointing mechanism and are restored in case of failover to ensur
 
 - `retract(...)` is required when there are operations that could generate retraction messages before the current aggregation operation, e.g. group aggregate, outer join. \
 This method is optional, but it is strongly recommended to be implemented to ensure the UDAF can be used in any use case.
-- `merge(...)` is required for session window ang hop window aggregations.
+- `merge(...)` is required for session window and hop window aggregations.
 - `get_result_type()` and `get_accumulator_type()` is required if the result type and accumulator type would not be specified in the `udaf` decorator.
 
 ### ListView and MapView
